@@ -1,0 +1,92 @@
+# [language.auto-pairs]
+# '(' = ')'
+# '{' = '}'
+# '[' = ']'
+# '"' = '"'
+# '`' = '`'
+
+
+[[language]]
+name = "go"
+indent = {tab-width = 2, unit = " "}
+file-types = ["go", "gotmpl", "gomod", "gosum", "tmpl"]
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+
+
+# [language-server.gols]
+# command = "gols"
+
+# [language-server.gols.config]
+# inlayHints.bindingModeHints = false
+# inlayHints.closingBraceHints.minLines = 10
+# inlayHints.closureReturnTypeHints.enable = "with_block"
+# inlayHints.discriminantHints.enable = "fieldless"
+# inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+# inlayHints.typeHints.hideClosureInitialization = false
+
+ 
+[[language]]
+name = "gleam"
+
+[language-server]
+biome = {command = "biome", args = ["lsp-proxy"]}
+emmet-ls = {command = "emmet-ls", args = ["--stdio"]}
+
+[[language]]
+name = "javascript"
+language-servers = [{ name ="typescript-language-server", except-features = ["format"] }, "biome", "emmet-ls"]
+auto-format = true
+
+[[language]]
+name = "typescript"
+language-servers = [{ name ="typescript-language-server", except-features = ["format"] }, "biome", "emmet-ls"]
+auto-format = true
+
+[[language]]
+name ="scss"
+
+
+[[language]]
+name ="html"
+file-types = ["html", "htm", "tmpl", "gotmpl"]
+language-servers = ["vscode-html-language-server", "tailwindcss-ls","emmet-ls"]
+auto-format = true
+
+[[language]]
+name= "jsx"
+language-servers = [{ name ="typescript-language-server", except-features = ["format"] }, "biome", "emmet-ls"]
+auto-format = true
+
+[[language]]
+name= "tsx"
+language-servers = [{ name ="typescript-language-server", except-features = ["format"] }, "biome", "emmet-ls"]
+auto-format = true
+
+[[language]]
+name = "dockerfile"
+file-types = ["Dockerfile", "dockerfile"]
+
+
+[[language]]
+name = "json"
+
+[[language]]
+name ="toml"
+
+
+[[language]]
+name = "vue"
+
+[[language]]
+name = "svelte"
+
+
+[[language]]
+name = "git-commit"
+language-servers = [ "scls"]
